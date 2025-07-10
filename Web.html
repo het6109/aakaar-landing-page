@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aakaar Event Landing Page</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="light">
+
+  <!-- Header -->
+  <header>
+    <div class="logo-nav">
+      <img src="images/aakaarlogo.jpg" alt="Aakaar Logo" class="logo" />
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Events</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+    <button id="modeToggle" class="toggle-mode" onclick="toggleTheme()">🌙</button>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Innovate. Engineer. Inspire.</h1>
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+    <div class="about-container">
+      <h2>About Aakaar</h2>
+      <p class="intro">
+        <strong>Aakaar</strong> is the prestigious annual technical festival of the Civil Engineering Department at IIT Bombay.
+        It provides a national platform for students to demonstrate their skills, explore innovations, and engage with
+        cutting-edge trends in civil engineering.
+      </p>
+
+      <p class="overview">
+        The event blends technical excellence with creativity, offering a series of <strong>competitions, symposiums, workshops,</strong> and
+        <strong>interactive events</strong> to foster both learning and leadership.
+      </p>
+
+      <div class="highlights">
+        <h3>Key Features of Aakaar:</h3>
+
+        <div class="feature">
+          <span class="icon">🎤</span>
+          <div class="text">
+            <h4>International Civil Engineering Symposium</h4>
+            <p>Showcase your research and engage with global civil engineering experts in technical paper presentations and discussions.</p>
+          </div>
+        </div>
+
+        <div class="feature">
+          <span class="icon">💻</span>
+          <div class="text">
+            <h4>Software Workshops</h4>
+            <p>Hands-on training on tools like AutoCAD, Revit, STAAD.Pro and more — guided by professionals and educators.</p>
+          </div>
+        </div>
+
+        <div class="feature">
+          <span class="icon">🏗️</span>
+          <div class="text">
+            <h4>Technical Competitions</h4>
+            <p>Bridge-It, Conquer-It, and CENEx — test your design and engineering acumen in real-world challenges.</p>
+          </div>
+        </div>
+
+        <div class="feature">
+          <span class="icon">🌱</span>
+          <div class="text">
+            <h4>Flagship Events</h4>
+            <p>Engage in exciting events like CiviQ (quiz), Smart Pitch (innovation showcase), and ENVIZN (eco-focused engineering).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline Section -->
+  <section class="timeline">
+    <h2>Timeline</h2>
+    <div class="timeline-container">
+      <div class="timeline-card">Launch: Aug 1</div>
+      <div class="timeline-card">Registration Closes: Sep 10</div>
+      <div class="timeline-card">Main Event: Sep 15</div>
+      <div class="timeline-card">Results: Sep 20</div>
+    </div>
+  </section>
+
+  <!-- Events Grid -->
+  <section class="events">
+    <h2>Featured Events</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="images/bridgelogo.jpeg" alt="Event 1" />
+        <h3>Bridge Builder</h3>
+        <p>Test your civil engineering skills in a practical structure challenge.</p>
+      </div>
+      <div class="card">
+        <img src="images/robologo.jpg" alt="Event 2" />
+        <h3>RoboRush</h3>
+        <p>Autonomous bots race through obstacle mazes — speed meets logic!</p>
+      </div>
+      <div class="card">
+        <img src="images/techlogo.webp" alt="Event 3" />
+        <h3>TechTalks</h3>
+        <p>Panel discussions with pioneers and visionaries of tech industries.</p>
+      </div>
+      <div class="card">
+        <img src="images/codelogo.avif" alt="Event 4" />
+        <h3>CodeStorm</h3>
+        <p>An intense 3-hour coding contest for algorithm lovers and coders.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Register Button -->
+  <section class="register">
+    <button>Register Now</button>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Connect with us</p>
+    <div class="social-icons">
+      <a href="#">🌐</a>
+      <a href="#">📸</a>
+      <a href="#">🐦</a>
+    </div>
+  </footer>
+
+  <!-- Dark/Light Mode Script -->
+  <script>
+    const toggleButton = document.getElementById("modeToggle");
+
+    function toggleTheme() {
+      const body = document.body;
+      body.classList.toggle("dark");
+      body.classList.toggle("light");
+
+      // Toggle icon
+      toggleButton.textContent = body.classList.contains("dark") ? "☀️" : "🌙";
+    }
+
+    // Load theme on refresh
+    window.onload = () => {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        document.body.className = savedTheme;
+        toggleButton.textContent = savedTheme === "dark" ? "☀️" : "🌙";
+      }
+    };
+
+    // Save on click
+    toggleButton.addEventListener("click", () => {
+      localStorage.setItem("theme", document.body.className);
+    });
+  </script>
+
+</body>
+</html>

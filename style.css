@@ -1,0 +1,270 @@
+/* ========== THEME COLORS ========== */
+body.light {
+  background-color: #ffffff;
+  color: #111111;
+}
+
+body.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* ========== GLOBAL STYLES ========== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ========== HEADER ========== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #ffa500;
+  color: white;
+}
+
+.logo-nav {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 150px;
+  margin-right: 1rem;
+}
+
+nav a {
+  margin: 0 1rem;
+  font-weight: bold;
+}
+
+.toggle-mode {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* ========== HERO SECTION ========== */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #f8b500, #fceabb);
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+/* ========== ABOUT SECTION ========== */
+.about {
+  padding: 4rem 2rem;
+  border-top: 2px solid #ececec;
+}
+
+.about-container {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  color: #e87e00;
+  margin-bottom: 1.5rem;
+}
+
+.about .intro,
+.about .overview {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+  color: #333;
+}
+
+.highlights {
+  margin-top: 2.5rem;
+  text-align: left;
+}
+
+.highlights h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: #444;
+}
+
+.feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  transition: background 0.3s;
+}
+
+.feature .icon {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+  color: #ff6a00;
+}
+
+.feature .text h4 {
+  margin: 0 0 0.3rem;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+.feature .text p {
+  margin: 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Light theme block background */
+body.light .feature {
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+/* Dark mode for About Section */
+body.dark .about {
+  background-color: #1e1e1e;
+}
+
+body.dark .about h2,
+body.dark .about h3,
+body.dark .about h4,
+body.dark .about p,
+body.dark .about .icon {
+  color: #e0e0e0;
+}
+
+body.dark .feature {
+  background-color: #292929;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+/* ========== TIMELINE ========== */
+.timeline {
+  padding: 2rem;
+  text-align: center;
+}
+
+.timeline-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.timeline-card {
+  padding: 1rem;
+  background: #f2f2f2;
+  border-radius: 10px;
+  min-width: 120px;
+}
+
+body.dark .timeline-card {
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+}
+
+/* ========== EVENTS GRID ========== */
+.events {
+  padding: 2rem;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background: #f8f8f8;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+}
+
+body.dark .card {
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+}
+
+/* ========== REGISTER BUTTON ========== */
+.register {
+  text-align: center;
+  padding: 2rem;
+}
+
+.register button {
+  background: #ff5c00;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+body.dark .register button {
+  background-color: #ff8800;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  background: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 1rem;
+}
+
+.social-icons a {
+  margin: 0 0.5rem;
+  color: #ccc;
+  font-size: 1.2rem;
+}
+
+body.dark footer {
+  background-color: #000;
+  color: #ccc;
+}
+
+/* ========== RESPONSIVE FIXES ========== */
+@media (max-width: 768px) {
+  .feature {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .feature .icon {
+    margin-bottom: 0.5rem;
+  }
+}
